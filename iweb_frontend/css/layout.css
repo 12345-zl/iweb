@@ -53,6 +53,10 @@
 /* PC：large-lg
  PAD: meduim-md
  PHONE: small-sm*/
+ .row{
+	 margin-left: -1em; /*抵消最左侧得列的padding-left*/
+	 margin-right: -1em;/*抵消最右侧得列的padding-right*/
+ }
 .row:after {
 	/* 表示布局中的一行 */
 	/*在行的尾部生成一个新的儿子，清除其他列
@@ -101,6 +105,8 @@
 .col-lg-12 {
 	float: left;
 	/* 浮动之后两个列才能处于同一行中 */
+	padding: 0 1em;/*为所以的列表添加1em的横向留白，组成2em的槽宽（gutter）*/
+
 }
 
 /* 在PC屏幕下每个列的宽度 */
