@@ -3,7 +3,7 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 
 }
 .container-fluid{     /* 流式容器 */
@@ -102,7 +102,12 @@
 .col-lg-9,
 .col-lg-10,
 .col-lg-11,
-.col-lg-12 {
+.col-lg-12,
+.col-lg-5-1,
+.col-lg-5-2,
+.col-lg-5-3,
+.col-lg-5-4,
+.col-lg-5-5{
 	float: left;
 	/* 浮动之后两个列才能处于同一行中 */
 	padding: 0 1em;/*为所以的列表添加1em的横向留白，组成2em的槽宽（gutter）*/
@@ -111,6 +116,22 @@
 
 /* 在PC屏幕下每个列的宽度 */
 @media screen and (min-width:1024px) {
+		
+	.col-lg-5-1{
+		width: 20%;
+	}
+	.col-lg-5-2{
+		width: 40%;
+	}
+	.col-lg-5-3{
+		width: 60%;
+	}
+	.col-lg-5-4{
+		width: 80%;
+	}
+	.col-lg-5-5{
+		width: 100%;
+	}
 	.col-lg-1 {
 		width: 8.3333333333%;
 	}

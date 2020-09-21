@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style type="text/css">
+		.box{
+			border: 1px solid #000;
+			width: 700px;
+			white-space: nowrap;     /* 空白部分放不下更多内容时也不换行 */
+			overflow-x: auto;      /*当水平方向内容溢出时显示滚动条，无溢出时不显示滚动条*/
+			/* overflow-x: scroll;    水平方向强制出现滚动条 */
+		}
+		.box img{
+			width: 300px;
+			height: 200px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="img/banner01.jpg" alt="">
+		<img src="img/banner02.jpg" alt="">
+		<!-- <img src="img/banner03.jpg" alt=""> -->
+		<!-- <img src="img/banner04.jpg" alt=""> -->
+	</div>
+</body>
+</html>
