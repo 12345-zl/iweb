@@ -32,7 +32,7 @@
   right: 200px;
 }
 .search-input{
-	width: 400px;
+	width: 360px;
 	height: 32px;
 	line-height: 40px;
 	padding: 0 0.6em;
@@ -67,6 +67,57 @@
 .my-cart > .fa{
 	color: #00BE56;
 	padding: 0 0.5em;
+}
+@media screen and (max-width:767px) {
+	.searchbar{
+		background: #00BE56;
+		border-bottom: 3px solid #b3efc0;
+		height: 52px;
+		font-size: 1.15em;
+	}
+	.logo-container{/
+	height: 52px;       /*容器的高大于内容的高才可能有竖直居中*/
+		display: flex;    /* 图片的容器显示模式为:弹性盒子 */
+		align-items: center;  /* 弹性盒子中的子元素居中对齐 */
+	}
+	.logo_reverse{
+		width: 100%;/*正常情况下，控制弹性盒子中的子元素的尺寸应该使用“弹性占比（flex）”
+		即可——此方式只会拉伸图片的宽，而不改变的高所以此处没有使用*/
+	}
+	.search{
+		/* 保证元素在父容器中竖直居中的方法1：调整上间距 */
+		/* margin-top: 25px; */
+	/* 保证元素在父容器中竖直剧中的方法2：先向下移到父容器中线以下，再向上微调自身高度的一半 */
+	  position: relative;      /* 相对定位的元素就和没定位一样 */
+	  margin-top: 0px;   /* 微调自身高度的一半 */
+	  top:0;
+	  right: 0;
+	}
+	.search-input{
+		width: 100%;
+		
+		padding: 0 3em 0 0.6em;
+		
+		margin-right: 0px;    /* 让出右侧的搜索按钮的位置 */
+	}
+	.search-button{
+		
+		background: #fff;
+		color: #00BE56;
+		top: -5px;
+		line-height: 32px;
+		
+	}
+	.navbar{
+		display: none;
+	}
+	.hambuger{
+		color: #FFFFFF;
+		line-height: 52px;
+		font-size: 26px;
+		margin-left: 12px;
+		
+	}
 }
 
 /* 3.导航条 */
@@ -352,6 +403,7 @@
 	color: #999;
 	line-height: 2em;
 	margin: 1em 0 1.5em;
+	
 }
 
 
