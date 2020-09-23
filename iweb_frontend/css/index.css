@@ -1,0 +1,153 @@
+/* 5.主体部分 */
+
+.mainbar .header{
+	border-bottom: 3px solid #ddd;
+	position: relative;
+}
+.mainbar .header h3{
+	font-weight: normal;    /* 标题字取消加粗 */
+	margin-bottom: .5em;   /* 0.5简写为.5 */
+	padding: 0  0.8em;     /* 0.8可简写为.8 */
+}
+.mainbar .header a{
+	position: absolute;
+	right: 0;
+	bottom: .3em;
+}
+.mainbar .header span{
+	width: 7em;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	bottom: -3px;    /* 此处如果使用0，仍然在父容器边框内 */
+	background: #00BE56;
+}
+.mainbar .course{
+	padding: 1.2em 0; /* 每个列中的.course需要自己提供上下间距 */
+}
+.mainbar .course .pic img{
+	width: 100%;
+}
+
+.mainbar  .course .title{
+	display: block;   /* 让这个课程标题占一整行 */
+	text-align: left;
+	line-height: 1.6em;
+}
+.mainbar .course .teacher{
+	display: block;
+	font-size: 0.8em;
+	color: #999;
+	text-align: left;
+
+}
+.mainbar .course .price{
+	display: block;  /* 让价格占一整行 */
+	color: #FF5A00;
+	font-weight: bold;
+	text-align: left;
+	line-height: 1.6em;
+	
+}
+.mainbar  .teacher-item{
+	padding: 2em 0;
+}
+.mainbar .teacher-item .pic img{
+	width: 100%;
+}
+.mainbar .teacher-item .tname{
+	font-size: 1.2em;
+	color: #555;
+	line-height: 2.6em;
+	display: block;    /* 显示为块级元素独立占一整行 */
+	text-align: center;
+	
+}
+.mainbar .teacher-item .maincourse{
+	font-size: .8em;
+	display: block;
+	color: #999;
+	text-align: center;
+}
+
+/* .mainbar .tea{
+	margin-top: 20px;
+}
+.mainbar .tea > li{
+	float: left;
+	margin-right: 12px;
+	margin-left: 11px;
+	text-align: center;
+	
+}
+.mainbar .tea > li:last-child{
+	margin-right: 0;
+}
+.mainbar .tea > li > p{
+	line-height: 1.6em;
+}
+.mainbar .tea > li > span{
+	line-height: 1.6em;
+} */
+
+/* 在PAD屏幕下讲师列表一行能显示3.5个讲师信息，溢出水平滚动 */
+@media screen and (min-width:768px) and (max-width:1023px) {
+	.teacher-list{
+		white-space: nowrap;    /*一行结尾处的空白处不换行*/
+		overflow-x: auto;      /*水平方向内容溢出时显示滚动条*/
+	    margin-left: 0;      /* 取消.row左边带的margin */
+		margin-right: 0;    /*取消.row右边带的margin*/
+	}
+	.col-lg-5-1{
+		/*取消列浮动--浮动元素只要空间不够必然转到下一行*/
+		float: none;
+		width: 214px;
+		/*将列设置为“行内块”--就可以在一行中出现多个列*/
+		display: inline-block;
+	}
+	
+}
+/* 在PHONE屏幕下讲师列表一行能显示2.5个讲师信息，溢出水平滚动 */
+
+@media screen and (max-width:767px) {
+	.teacher-list{
+		white-space: nowrap;    /*一行结尾处的空白处不换行*/
+		overflow-x: auto;      /*水平方向内容溢出时显示滚动条*/
+	    margin-left: 0;      /* 取消.row左边带的margin */
+		margin-right: 0;    /*取消.row右边带的margin*/
+	}
+	.col-lg-5-1{
+		/*取消列浮动--浮动元素只要空间不够必然转到下一行*/
+		float: none;
+		width: 140px;
+		/*将列设置为“行内块”--就可以在一行中出现多个列*/
+		display: inline-block;
+	}
+	@media screen and (max-width:767px){
+		 /*让body在底部留白,高度为.tabbar的高度*/
+		 .tabbar{
+		 	position: fixed;
+		 	left: 0;
+		 	right: 0;
+		 	bottom: 0;
+		 	height: 64px;
+		 	background: #F8F6FA;
+		 	border-top: 1px solid #d2cfcc;
+		 }
+		 
+		body{
+			margin-bottom: 64px;
+		}
+		.tab{
+			color: #ccc;
+			text-align: center;
+			padding: 7px 0 0;
+		}
+		.tab.active{
+			color: #00be56;
+		}
+		.tab .fa{
+			font-size: 2em;
+		}
+	}
+}
