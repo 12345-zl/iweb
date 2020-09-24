@@ -1,22 +1,33 @@
-1.如何在布局系统中让图标/文字边缘留白？
-方式1：添加margin或padding
-局限：会导致内容区域变小
-方式2：修改元素定位方式为相对/绝对，再修改left或right
-局限：相对或绝对定位本身的用途不是为了微调某个元素的位置；
-与渐变动画配合不佳；
-方式3：使用css3提供的变形函数不影响定位；不影响其他元素，与transition过渡
-动画完美配合
-局限:CSS3新特性，老IE不支持
-.logo{
-	transform:translateX(10px);/*沿着X轴平移*/
-}
-二、小技巧：如何创建一个“充满整个屏幕的容器”？
-.box{
-	        position:fixed;
-			left:0;
-			rigth:0;
-			top:0;
-			bottom:0;
-			/*此处不能使用height:100%;*/
+一、为HTML元素绑定事件监听函数的方式
+方式1：直接在HTML中调用js
+index.html
+<div onclick="f1()"></div>
+不足：html和js混杂在一起，可维护性差
+方式2：JS中使用ID查找元素，添加操作函数
+index.html
+<div id="btn"></div>
+index.js
+document.getElementById('btn').onclick=function(){}
+不足：ID是唯一的，即处理函数不能复用
+方式3：html中添加“自定义/扩展属性”，js中根据扩展属性查找元素
+index.html
+<div qiehuan="caidan"></div>
+index.js
+document.querySelector('[data-qiehuan="caidan"]').onclick=function(){}
+优势：实现了HTML/JS完全分离，且js代码可以复用
+小知识：程序员的约定
+元素上有class<=>该元素有样式设定
+元素上有id<=>该元素有js操作
 
+
+二、复习：Css3过渡/渐变动画
+过渡/渐变：元素的某个样式从一个状态变为另一个状态，例如：宽度从0变为100、位置从-100变为100、颜色从绿变为红，
+默认情况下是“猛地改变”；Css3提供的transition可以在指定的时间内不断地改变
+核心用法
+.class1{
+	样式：值1
+	transition:all 0.5s   /*对所有样式的改变添加补间动画，持续0.5秒钟*/
 }
+.class1 .class2{
+	样式：值2
+	}
