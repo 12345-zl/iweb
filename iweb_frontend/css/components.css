@@ -153,6 +153,7 @@
 @media screen and (max-width:767px) {
 	/*PHONE屏幕下，导航条变为“充满整个屏幕的半透明区*/
 			.navbar{
+				/* 带.active的导航条取消平移变形 */
 				transform: translateX(-100%);
 				/* 默认情况下，响应式导航条隐藏在屏幕左侧 */
 				position: fixed;
@@ -162,6 +163,7 @@
 				left: 0;
 				background: rgba(0,0,0,0.9);
 				height: auto;         /*必须覆盖所有屏幕下高度为52px的设定*/
+				transition: all 0.3s;
 				z-index: 9999;       /*必须足够高，以盖住页面中绝对定位的宽*/
 		}
 		    .menu > li{
@@ -175,7 +177,11 @@
 			 right: 10px;
 			 color: #fff;
 			 font-size: 2em;
+			 
 				
+			}
+			.navbar.active{
+				transform: translateX(0);
 			}
 }
 /* 4.轮播广告 */
