@@ -1,33 +1,56 @@
-一、为HTML元素绑定事件监听函数的方式
-方式1：直接在HTML中调用js
-index.html
-<div onclick="f1()"></div>
-不足：html和js混杂在一起，可维护性差
-方式2：JS中使用ID查找元素，添加操作函数
-index.html
-<div id="btn"></div>
-index.js
-document.getElementById('btn').onclick=function(){}
-不足：ID是唯一的，即处理函数不能复用
-方式3：html中添加“自定义/扩展属性”，js中根据扩展属性查找元素
-index.html
-<div qiehuan="caidan"></div>
-index.js
-document.querySelector('[data-qiehuan="caidan"]').onclick=function(){}
-优势：实现了HTML/JS完全分离，且js代码可以复用
-小知识：程序员的约定
-元素上有class<=>该元素有样式设定
-元素上有id<=>该元素有js操作
+一、内容/样式/行为的三分离
+  HTML:只负责页面内容；例如文字、图片、输入框、按钮
+  CSS：只负责内容的样式，例如颜色、大小、间距、动画
+  JS：只负责页面的行为/交互，例如输入检测，交互特效，异步数据加载和处理
+二、面试题
+HTML5标准中新增了哪些标签？至少10个，如audio,canvas...
+HTML5标准中废弃了哪些标签？如center/marquee...
+HTML5中新增了哪些标签的属性？如<input placeholder="提示文字" maxlength="最大长度" type="date/color/range"...>
+HTML5标准中废弃了那些标签属性？如<body bgsound=""><td align=""><img width="" height="">
 
 
-二、复习：Css3过渡/渐变动画
-过渡/渐变：元素的某个样式从一个状态变为另一个状态，例如：宽度从0变为100、位置从-100变为100、颜色从绿变为红，
-默认情况下是“猛地改变”；Css3提供的transition可以在指定的时间内不断地改变
-核心用法
-.class1{
-	样式：值1
-	transition:all 0.5s   /*对所有样式的改变添加补间动画，持续0.5秒钟*/
-}
-.class1 .class2{
-	样式：值2
-	}
+三、三、ES6中遍历数组的新方法
+ES6之前数组遍历的传统方法：
+for(let i=0;i<list.length;i++){
+			let e=list[i]
+		  console.log(i,e)
+		//i称为循环变量，就是每个元素的下标
+		//e称为数组中的元素
+ES6提供数组遍历的新方法：
+//ES6中数组变量的新方法
+		list.forEach(function(e,i){
+			console.log('访问到一个元素：',e,i)
+		})
+		提示：ES6提供的foreach函数在“依次遍历每个元素”时比for循环简单；但是她不能像for循环那样跳序或者
+		逆序遍历
+		
+		
+三、将自己的项目部署到云服务器
+①注册一个新浪微博账号
+②使用新浪微博账号捆绑开通新浪云服务账号：sae.sina.com.cn
+注意：此处的安全邮箱和安全密码用于后续的代码维护操作--此处不同于登录用户名和密码（使用微博账号登录）
+③登录新浪云服务账号，创建一个云应用（即网站），获得一个免费的二级域名
+注意：选择云应用的开发语言时，任何一种后端语言都支持HTML/CSS/JS代码，此处推荐最便宜的“PHP>标准环境”
+④进入自己的云应用，点击“代码管理>创建版本”上传代码到服务器上
+说明：可以一个文件一个文件的单独上传，也可以把多个文件压缩为.zip包批量上传
+
+⑤使用浏览器访问自己的网站
+说明：响应式网页既可以PC又可以在PHONE浏览器中访问
+
+四、响应式/H5网站打包为app安装到手机，网站打包为app的作用：
+对于用户：更加方便使用，无需启动浏览器输入网址
+对于企业，可以增强用户的粘性，提高用户忠诚度
+①安装HbuilderX开发工具，运行后点击左下角的“未登录”进行注册和登录操作-app打包必须登录
+②创建一个新的“5+APP”项目，修改其配置/清单文件（manifest.json），指定app图标/名称/起始页面地址
+③开始打包此App项目---将项目文件上传到"Dcloud.io"的服务器，打包完成后得到app安装文件
+④把自己的app安装文件复制到手机中，安装运行即可
+  
+
+五、让用户/面试官扫码访问自己的网站/app
+二维码：内容可以是任何数据，例如网址
+生成网址对应的二维码：https://cli.im/url
+练习一：把自己的网站域名转换为二维码形式，放在简历中让面试官扫码访问
+例如：http://zlit.applinzi.com/index.html
+练习二：把自己的app上传到自己的云服务器上，把他对应的网址转为二维码形式，
+放在简历上让面试官下载app
+例如：http://zlit.applinzi.com/iweb.apk
