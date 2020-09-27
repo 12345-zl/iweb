@@ -29,3 +29,111 @@
 .course-types ul li.active a{
 	color: #FFFFFF
 }
+
+/* 2.课程列表 */
+.course-list{
+	margin-top: 1.5em;
+	border-top: 2px solid #00be56;
+}
+.course{
+	padding: 2em 0;
+	border-bottom: 1px dotted #CCCCCC;
+	
+	
+}
+.course .pic{
+	width: 100%;    /*图片充满一列*/
+	/* max-width:100% */
+}
+.course .details{
+	color: #555555;
+	position: relative;
+	/* 相对定位后成为“价格”的绝对定位参照物 */
+}
+.course .details h3{
+	
+}
+
+.course .details p{
+	line-height: 2em;
+	margin: 0;    /*取消p元素自带的margin*/
+}
+.course .details span{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	font-size: 1.8em;
+	margin-top: -0.9em;   /*向上微调自身高度的一半*/
+	color: #FF5A00;
+}
+
+.course .jump{
+	/* height: 100%; 无效——列的高度只能靠内容撑起来*/ 
+	 /* position: relative; */
+	 text-align: right;
+}
+.course .jump2details{
+	/* position: absolute; 按钮绝对定位，不占布局空间，父容器高度就会丢失,top使用百分比赋值就无效 */
+/* 	position: relative; */
+	margin-top: 48px;
+	background: #55c760;
+	border: none;
+	color: #fff;
+	padding: 0.8em 2em;
+}
+@media screen and (min-width:768px) and(max-width:1023px) {
+	
+	.course.details h3{
+		margin: 0 0 0.8em;
+	}
+	.course .details p{
+		line-height: 1.7em;
+	}
+	.course .jump2details{
+		margin-top: 32px;
+	}
+}
+@media screen and (max-width:767px){
+	.course-types span{
+		float: none;
+	}
+	.course-types ul{
+		margin-left: 0;
+		border: 1px solid #00BE56;
+		display: flex;      /*父元素使用弹性布局*/
+	}
+	.course-types ul li{
+		padding: 0;
+		/* 弹性容器中的每个子元素指定弹性占比 */
+		flex: 1;
+		text-align: center;
+	}
+	.course .details h3{
+		margin: 0 0 0.5em;
+	}
+	.course .details p{
+		line-height: 1.3em;
+	}
+	.course .details span{
+		position: static;
+		font-size: 1.2em;
+		display: block;
+		/* span默认是inline元素，上下margin无效 */
+		margin-top: 1.4em;
+	
+	}
+	.course .jump .jump2details{
+		padding: 0.4em 1em;
+		margin-top: 0;
+	}
+	.course{
+		/* 相对定位，为了查看详情按钮提供绝对定位的参照物 */
+		position: relative;
+		padding: 1em 0;
+	}
+	.course .jump{
+		position: absolute;
+		right: 1em;
+		bottom: 1em;
+	}
+}

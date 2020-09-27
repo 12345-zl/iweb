@@ -385,7 +385,7 @@
 	line-height: 3em;
 }
 /*面包屑中的li(除了最后一个尾部生成一个)*/
-.breadcrumb ul li:not(:last-child)after{
+.breadcrumb ul li:not(:last-child):after{
 	content: '>';
 	margin: 0 0.5em;
 	color: #999999;
@@ -393,6 +393,45 @@
 .breadcrumb ul li a{
 	color: #999999;
 }
-
-
-
+.pager{
+	padding: 3em 0;
+}
+.pager ul{
+	text-align: center;
+	
+}
+	
+.pager ul li{
+	/* 让li变为行内快，既可以多个li共处一行，也可以指定尺寸、间距 */
+	display: inline-block;
+	/* 次方式的不足：①老ie不支持 ②HTML中只要有空白字符，呈现时就会有一个空格 */
+	border: 1px solid #DDDDDD;
+	padding: 0.3em 0.7em;
+	cursor: pointer;
+}
+.pager ul li.active{
+	background: #99d989;
+	border: 1px solid #99D989;
+	cursor: default;
+}
+.pager ul li a{
+	color: #999999;
+}
+.pager ul li.active a{
+	color: #FFFFFF;
+	cursor: default;
+	/* 将超链接的默认光标效果（小手）转换为平时的效果 */
+}
+.pager ul li.disabled{
+	background: #f9f9f9;
+	cursor: default;
+}
+.pager ul li.disabled a{
+	color: #ddd;
+	cursor: default;
+}
+/* 当鼠标悬停于非.active项/非.disabled项上方是边框变色 */
+.pager ul li:not(.active):hover,
+.pager ul li:not(.disabled):hover{
+	
+}
