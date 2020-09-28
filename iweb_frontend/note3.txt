@@ -67,3 +67,48 @@ img{
 	/*可以随着容器的尺寸改变-无限小，但是最大只能到图片的原始大小，
 	即不会无限放大，以避免放大后的马赛克问题*/
 }
+
+
+网页中可以实现页面跳转的方式
+方式一：超链接
+<a href="目标地址"></a>
+简单，但是功能有限例如：不能在跳转页面前执行复杂的检验和审核等功能
+方式二：js跳转
+<button onclick="jump()"></button>
+    <script>
+       function jump(){
+		   //此处可以执行复杂的检验和审核等操作
+		   window.location.href='目标地址'  //在当前页面中打开
+		   windown.open('目标地址')  //在新的空白页中打开
+	   }
+	</script>
+	二、跳转到某个页面时，如何附加一些查询数据
+	//不带查询数据的地址
+	 URL：http://codeboy.com/detail.html  
+	 //带查询数据的地址
+	 URL:http://codeboy.com/detail.html?cid=501&user=wenhua&code=12345
+	 w3c委员会规定
+	 ①如果想给某个页面传递更多的数据，则追加在URL后面，用？开头，
+	 ②数据以key=value形式出现；
+	 ③如果需要传递多个这样的数据，中间用&符号分隔
+	 这样的以？开头的数据格式，称为“url地址的查询字符串”
+	 
+	 
+	HTML对象的扩展属性
+	根据html5规定，所有的HTML标签只能使用特定的属性，例如id/class/style/src/type...;
+	如果开发者想给标签添加自定义属性，这样的属性必需以data-开头，称为“扩展属性”
+	推荐的命名规范：使用“烤串命名法”,例如：<div data-animate-min-width="20%">..</div>
+	注意：浏览器不会处理任何一个扩展属性;主要是为了js操作该元素方便。使用方法：
+	let w = div.dataset.animateMinWidth
+	说明：
+	HTML5为每个标签对应的js对象都提供了一个dataset属性，其中保存着该标签声明的
+	所有data-扩展属性
+	如果开发者在html中声明data-属性时采用的是标准的“烤串命名法”，则该属性在dataset中
+	自动转换为“小驼峰命名法”
+	
+	晚间任务：
+	①完成课程详情页面在PAD和PHONE下的布局效果
+	  要求：PHONE下图片在上，介绍文字在下方
+	②尝试完成“用户登录页”：login.html
+	③尝试完成“用户注册页”：register.html
+	
