@@ -1,0 +1,81 @@
+/* 主体部分 */
+.mainbar{
+	background: #fcfcfc;
+}
+.mainbar:before,
+.mainbar:after{  /*解决.mainbar里面的.container的margin越界问题*/
+	content: '';
+	display:table;
+}
+.mainbar .container{
+	background: #fff;
+	margin: 3em auto 3.5em;
+	border: 1px solid #e6e6e6;
+	/* 在边框外侧有外阴影:水平偏移量 竖直偏移量  阴影半径 阴影的颜色*/
+	box-shadow:0 0 2px #e6e6e6;
+	/* 边框圆角半径 */
+	border-radius:2px;
+	padding: 1em 7em 2em;
+	
+}
+/* .mainbar .container h2{
+	color:#FFA929;
+	text-align: center;
+}
+.mainbar .container .row{
+	color: #757575;
+	
+} */
+.form .header{
+	font-size:1.4em;
+	color: #ff9300;
+	line-height: 4em;
+	border-bottom:1px solid #ddd;
+	text-align: center;
+}
+.form .row{
+	line-height: 2.9em;
+	padding: .6em 0;
+}
+.form label{
+	/* label默认是Inline元素，无法指定左右对齐，必须 */
+	display: block;
+	text-align: right;
+}
+.form input{
+	width: 100%;
+	padding:.8em 1em;
+	border: 1px solid #ccc;
+	border-radius: 3px;/*边框圆角半径*/
+	/* outline: none;边框蓝色的线取消 */
+	vertical-align: middle;//
+}
+.form span.error{
+	color:#f00;
+}
+.form span.succ{
+	color: #00c160;
+}
+.form .captcha{
+	height: 34px;
+	vertical-align: middle;
+}
+.form .refresh{
+	font-size: 2em;
+	color: #00BE56;
+	cursor: pointer;    /*鼠标悬停出现小手*/
+	line-height: 34px;
+}
+/* 在PHONE屏幕下，调整间距及文字对齐 */
+@media  screen and (max-width:767px) {
+	.mainbar .container{
+		padding: .5em 2em 1em;
+	}
+	.form .row{
+		line-height:2em;
+	}
+	.form label{
+		text-align: left;
+	}
+	
+}

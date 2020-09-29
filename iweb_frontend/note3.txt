@@ -112,3 +112,19 @@ img{
 	②尝试完成“用户登录页”：login.html
 	③尝试完成“用户注册页”：register.html
 	
+	
+	面试题：下列那些html的嵌套是合法的
+	1.<span>AA<span>BB</span>CC</span>
+	2.<div>AA<div>BB</div>CC</div>
+	3.<a>AA<a>BB</a>CC</a>
+	4.<p>AA<p>BB</p>CC</p>
+	正确答案：1和2
+	说明：根据W3C的规定，有些标签的语义上就允许自己体内嵌套一个自己（如：一个
+	块中嵌套一个子块）；但是有些标签语义上就不允许出现嵌套（如：一个段落内部嵌套一个子段落）
+	
+	最常见的元素显示模式(display)
+    ①block:块级元素可以指定宽高但是必须独占一行
+	②inline:行内元素可以与其他元素共处一行，但是不能指定宽高
+	③inline-block:行内块元素，既可以与其他元素共处一行，也可以指定宽高,如img/input....
+	注意：通常行内元素与同一行文字默认都不是竖直居中对齐的可以使用：vertical-align:top/bo
+	ttom/middle
