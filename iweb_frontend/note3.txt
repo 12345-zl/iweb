@@ -128,3 +128,16 @@ img{
 	③inline-block:行内块元素，既可以与其他元素共处一行，也可以指定宽高,如img/input....
 	注意：通常行内元素与同一行文字默认都不是竖直居中对齐的可以使用：vertical-align:top/bo
 	ttom/middle
+	
+	面试题：请说出您知道的可以提交的表单数据的html的方法
+	  ①<input type="submit" value="注册">
+	  ②<button type="submit">注册</button>
+	  ③<button>注册</button>     注意type的默认值
+	  ④<input type="image" src="xx.png">
+	  
+	  
+	说明：上述四种方法都是“同步提交”--提交之后都需要等待服务器给出响应消息，如果服务器响
+	应比较慢，客户端将一直等待，影响浏览体验；更广泛的情况下，可以使用“异步提交”在客户端
+	可以继续浏览内容的同时，服务器同一时刻也在处理表单数据，从而提高浏览体验--只能使用
+	AJAX技术实现
+	

@@ -33,6 +33,10 @@
 	border-bottom:1px solid #ddd;
 	text-align: center;
 }
+.form .header .jump-to-login{
+	font-size: .6em;
+	color: #FF9300;
+}
 .form .row{
 	line-height: 2.9em;
 	padding: .6em 0;
@@ -42,7 +46,9 @@
 	display: block;
 	text-align: right;
 }
-.form input{
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="tel"]{
 	width: 100%;
 	padding:.8em 1em;
 	border: 1px solid #ccc;
@@ -65,6 +71,16 @@
 	color: #00BE56;
 	cursor: pointer;    /*鼠标悬停出现小手*/
 	line-height: 34px;
+}
+.form .btn-submit{
+	width: 100%;
+	border: none;
+	background: #5ab33f;
+	height: 35px;
+	color: #FFF
+}
+.form .btn-submit:hover{
+	background: #4ba634;
 }
 /* 在PHONE屏幕下，调整间距及文字对齐 */
 @media  screen and (max-width:767px) {

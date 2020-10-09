@@ -1,9 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<head>
-		<meta charset="utf-8">
-		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>课程详情-iweb在线课堂</title>
+		<link rel="icon" href="img/tubiao.ico">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/scaffolding.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/components.css">
+		<link rel="stylesheet" href="css/login.css">
 	</head>
 	<body>
+		<!-- 1.最顶端的“灰色条”：topbar -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row text-right">
+					<a href="#" class="topbar-item">
+						<span class="fa fa-star"></span>
+						收藏i前端
+					</a>
+					<a href="#" class="topbar-item">
+						<span class="fa fa-mobile"></span>
+						<span class="download-app">下载手机客户端</span>
+					</a>
+					<span class="topbar-item">
+						<span class="fa fa-envelope">
+							反馈邮箱：iweb@126.com
+						</span>
+					</span>
+
+
+
+					<span class="topbar-item">
+						<span class="fa fa-fax"></span>
+						客服电话：4008-200-200
+					</span>
+
+
+				</div>
+			</div>
+		</div>
+		<!-- 2.搜索条：searchbar -->
+		<div class="searchbar">
+			<div class="container">
+				<div class="row">
+					<!-- 左侧的logo -->
+					<div class="col-lg-2 col-sm-2 logo-container">
+						<a href="index.html">
+							<img src="img/logo.png" class="logo hidden-sm">
+							<img src="img/logo_reverse.png" class="logo_reverse hidden-lg hidden-md" alt="">
+						</a>
+					</div>
+					<!-- 靠右对齐的搜索框和购物车按钮 (PHONE屏幕下隐藏)-->
+					<div class="col-lg-10 col-sm-8">
+						<div class="search float-right">
+							<input placeholder="课程搜索" type="text" class="search-input">
+							<button class="search-button">
+								<span class="fa fa-search"></span>
+								col-md-10 </button>
+						</div>
+						<!-- 我的购物车 -->
+						<div class="my-cart hidden-sm">
+							<span class="fa fa-lg fa-shopping-cart"></span>
+							我的购物车(0)
+							<span class="fa fa-caret-down"></span>
+						</div>
+					</div>
+					<!-- 仅在PHONE屏幕下显示的：汉堡包按钮 -->
+					<div class="col-sm-2  hidden-lg hidden-md">
+
+						<span data-toggle="nav" class="fa fa-navicon hambuger"></span>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 3.导航条：navbar -->
+		<div data-target="nav" class="navbar">
+			<div class="container">
+				<div class="row">
+					<!-- 导航菜单 -->
+					<div class="col-lg-10 col-md-10 col-sm-12">
+						<ul class="menu">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="course.html">全部课程</a></li>
+							<li><a href="course.html?typeId=1">基础课程</a></li>
+							<li><a href="course.html?typeId=2">核心课程</a></li>
+							<li><a href="course.html?typeId=3">进阶课程</a></li>
+							<li><a href="teacher.html">名师堂</a></li>
+							<li><a href="school.html">校区</a></li>
+						</ul>
+						<a href=""><span data-click="ma" class="menu-close1 hidden-lg hidden-md">&times;</span></a>
+					</div>
+					<!-- 登录|注册 -->
+					<div class="col-lg-2 col-md-2 hidden-sm">
+						<div class="user-center">
+							<div class="text-center">
+								<a href="login.html">登录</a>
+								<span>|</span>
+								<a href="register.html">注册</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- 5.主体：mainbar -->
+		<div class="mainbar">
+			 <div class="container form">
+				<div class="col-sm-2  hidden-lg hidden-md">
+				
+					<img data-toggle = "nav" src="img/qrcode1.png" class="ma" >
+				
+				</div>
+				 <!-- 表单头部 -->
+				 <div class="header">
+					 
+					 用户注册
+					 <a href="register.html" class="float-right jump-to-register">新用户注册</a>
+				 </div>
+				 <!-- 表单主体 -->
+				 <div class="row ">
+				 	<div class="col-lg-6 col-md-6 col-sm-10">
+					<div class="col-lg-12 col-md-12 col-sm-12 username">
+						<span class="float-right tips" style="display: inline;">用户名不能为空</span>
+						用户名：
+					</div>
+					
+					<div class="col-lg-12 col-md-12 col-sm-12 username text">
+						
+						<span class="fa fa-user-o user-icon"></span>
+						<span class="fa fa-times icon2"></span>
+						<input id="user" type="text" placeholder="邮箱/手机号" class="user-input">
+						</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 username">
+								<span class="float-right tips" style="display: inline;">密码不能为空</span>
+								密码：
+							</div>
+					
+						<div class="col-lg-12 col-md-12 col-sm-12 username text">
+						 <span class="fa fa-lock user-icon"></span>
+							<span class="fa fa-times icon2"></span>
+							<input id="pwd" type="password" placeholder="密码" class="user-input">
+						</div>
+						  <div class="col-lg-12 col-md-12 col-sm-12 login-button">
+							
+							  <input type="checkbox"/>
+							  自动登录
+						
+							  <button type="button" class="btn-login">立即登录</button>
+						  </div>
+					</div>
+				 	<div class="col-lg-1 col-md-1 hidden-sm">
+						<img src="img/line.png" class="pic" >
+					</div>
+				 	<div class="col-lg-5 col-md-5 ma-d">
+						<img src="img/ma.png" class="pic2" >
+						<label class="hidden-sm">扫码登录</label>
+						<a href=""><span data-click="ma" class="menu-close hidden-lg hidden-md"></span></a>
+					</div>
+				 </div>
+			 </div>
+			</div>
+		<div class="bottombar hidden-sm">
+			<div class="container">
+				<div class="row hidden-sm">
+					<div class="col-md-12 col-lg-7 col-sm-12">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h4 class="fn-menu-header">常见问题</h4>
+								<ul class="fn-menu">
+									<li><a href="">发展历程</a></li>
+									<li><a href="">管理团队</a></li>
+									<li><a href="">企业文化</a></li>
+									<li><a href="">加入我们</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h4 class="fn-menu-header">新手帮助</h4>
+								<ul class="fn-menu">
+									<li><a href="">学员账号</a></li>
+									<li><a href="">选课流程</a></li>
+									<li><a href="">网报流程</a></li>
+									<li><a href="">上课地点</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h4 class="fn-menu-header">常见问题</h4>
+								<ul class="fn-menu">
+									<li><a href="">如何注册</a></li>
+									<li><a href="">如何授课</a></li>
+									<li><a href="">如何报名</a></li>
+									<li><a href="">如何缴费</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<h4 class="fn-menu-header">联系我们</h4>
+								<ul class="fn-menu">
+									<li><a href="">校区电话</a></li>
+									<li><a href="">意见建议</a></li>
+									<li><a href="">联系邮箱</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-5 col-sm-12">
+						<div class="contact">
+							<span class="fa fa-fax">
+							</span>
+							<div class="hotline">
+								客服联系<br>
+								4008-220-200(9:00-24:00)
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 版权声明 -->
+				<div class="row hidden-sm">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="copyright">
+							Copyright 2016 iqianduan.com, All Rights Reserved 版权所有<br>
+							北京前端教育科技有限公司　京ICP备123456号-1 京公网安备110180201608号
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 7.页签条   tabbar 仅在phone中显示,功能约等于顶部的导航条,但是最多只能放六项 -->
+		<div class="tabbar hidden-lg hidden-md">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5-1">
+						<div class="tab active">
+							<span class="fa fa-home"></span>
+							<div>首页</div>
+						</div>
+					</div>
+					<div class="col-sm-5-1">
+						<div class="tab">
+							<span class="fa fa-map"></span>
+							<div>课程</div>
+						</div>
+					</div>
+					<div class="col-sm-5-1">
+						<div class="tab school">
+							<span class="fa fa-bank"></span>
+							<div>校区</div>
+						</div>
+					</div>
+					<div class="col-sm-5-1">
+						<div class="tab">
+							<span class="fa fa-address-card-o"></span>
+							<div>讲师</div>
+						</div>
+					</div>
+					<div class="col-sm-5-1">
+						<div class="tab">
+							<span class="fa fa-user"></span>
+							<div>用户</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/components.js"></script>
+		<script src="js/login.js"></script>
+
 	</body>
 </html>

@@ -1,0 +1,213 @@
+/* 主体部分 */
+.mainbar {
+	background: #fcfcfc;
+}
+
+.mainbar:before,
+.mainbar:after {
+	/*解决.mainbar里面的.container的margin越界问题*/
+	content: '';
+	display: table;
+}
+
+.mainbar .container {
+	background: #fff;
+	margin: 3em auto 3.5em;
+	border: 1px solid #e6e6e6;
+	/* 在边框外侧有外阴影:水平偏移量 竖直偏移量  阴影半径 阴影的颜色*/
+	box-shadow: 0 0 2px #e6e6e6;
+	/* 边框圆角半径 */
+	border-radius: 2px;
+	padding: 1em 7em 2em;
+
+}
+
+.form .header {
+	padding-left: 12px;
+	border-left: 3px solid #77c558;
+	font-size: 1.7em;
+	/* font-weight: lighter; */
+
+}
+
+.form .row {
+	line-height: 2.9em;
+	padding: .6em 0;
+}
+
+.form .usershuru {
+	position: absolute;
+	/* 相对定位的元素就和没定位一样 */
+	top: 50%;
+	display: inline-block;
+	width: 300px;
+	margin-top: 10px;
+
+}
+
+.form .user-icon {
+	font-weight: lighter;
+	text-align: center;
+	background: #DDDDDD;
+	width: 38px;
+	height: 38px;
+	color: #FFFFFF;
+	line-height: 32px;
+	border: none;
+	font-size: 1.7em;
+	position: absolute;
+	margin-top: 1px;
+	margin-left: 1px;
+
+}
+
+.form .header .jump-to-register {
+	text-decoration: underline;
+	font-size: .6em;
+	color: #FF9300;
+}
+
+.form .header .jump-to-register:hover {
+	color: #ff3300;
+}
+
+.form .username {
+	display: block;
+	text-align: left;
+	font-size: 1.2em;
+}
+
+.form .user-input {
+	border: 1px solid #99D989;
+	width: 100%;
+	padding: .8em 1em;
+	padding-left: 38px;
+	border-radius: 3px;
+	/*边框圆角半径*/
+	/* outline: none;边框蓝色的线取消 */
+	vertical-align: middle;
+
+}
+
+.form .text {
+	position: relative;
+}
+
+.form .tips {
+	color: #f00;
+	font-size: 8px;
+
+}
+
+.form .icon2 {
+	text-align: center;
+	color: #f00;
+	line-height: 32px;
+	border: none;
+	font-size: 1.7em;
+	position: absolute;
+	right: 0;
+	margin-right: 20px;
+	margin-top: 3px;
+}
+
+.form .login-button {
+	padding-top: 30px;
+	font-size: 1em;
+}
+
+.form .btn-login {
+	float: right;
+	border: none;
+	background: #5ab33f;
+	height: 35px;
+	color: #FFF;
+	width: 200px;
+
+}
+.form .btn-login:hover{
+	background: #4ba634;
+}
+
+.form .pic {
+	margin: 0 0 0 80px;
+}
+
+.form label {
+	display: block;
+	text-align: center;
+	margin: 0 75px 0 136px;
+	margin-bottom: 80px;
+
+}
+
+.form .pic2 {
+	display: block;
+	width: 129px;
+	height: 129px;
+	margin: 65px 0 0 132px;
+	margin-bottom: 0px;
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+	.form .pic {
+		margin: 0 0 0 50px;
+	}
+	.form .btn-login {
+		
+		width: 120px;
+	
+	}
+	.form .pic2 {
+		display: block;
+		width: 129px;
+		height: 129px;
+		margin:  50px 0px 0 75px;
+		
+	}
+	.form label {
+		display: block;
+		text-align: center;
+		margin: 10px 0 0  60px;
+		margin-bottom: 80px;
+	}
+}
+@media screen and (max-width:767px){
+	.form .btn-login {
+		
+		width: 100%;
+	
+	}
+	.form .header{
+		position: relative;
+	}
+	.form .ma{
+		position: absolute;
+		right: 0;
+		margin-top: -15px;
+	}
+	.form .ma-d{
+		transform: translateX(100%);
+		/* 默认情况下，响应式导航条隐藏在屏幕左侧 */
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.9);
+		height: auto;         /*必须覆盖所有屏幕下高度为52px的设定*/
+		transition: all 0.3s;
+		z-index: 9999;       /*必须足够高，以盖住页面中绝对定位的宽*/
+	}
+	.form .menu-close1{  /*仅在PHONE屏幕下显示的关闭按钮*/
+	 position: absolute;
+	 top:10px;
+	 right: 10px;
+	 color: #fff;
+	 font-size: 2em;
+	 
+		
+	}
+	.form .ma-d.active{
+		transform: translateX(0);
+	}
+}
