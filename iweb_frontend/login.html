@@ -87,13 +87,13 @@
 						<ul class="menu">
 							<li><a href="index.html">首页</a></li>
 							<li><a href="course.html">全部课程</a></li>
-							<li><a href="course.html?typeId=1">基础课程</a></li>
-							<li><a href="course.html?typeId=2">核心课程</a></li>
-							<li><a href="course.html?typeId=3">进阶课程</a></li>
+							<li><a href="course_base.html">基础课程</a></li>
+							<li><a href="course-core.html">核心课程</a></li>
+							<li><a href="course_progress.html">进阶课程</a></li>
 							<li><a href="teacher.html">名师堂</a></li>
 							<li><a href="school.html">校区</a></li>
 						</ul>
-						<a href=""><span data-click="ma" class="menu-close1 hidden-lg hidden-md">&times;</span></a>
+						<a href=""><span data-click="ma" class="menu-close hidden-lg hidden-md">&times;</span></a>
 					</div>
 					<!-- 登录|注册 -->
 					<div class="col-lg-2 col-md-2 hidden-sm">
@@ -116,7 +116,7 @@
 			 <div class="container form">
 				<div class="col-sm-2  hidden-lg hidden-md">
 				
-					<img data-toggle = "nav" src="img/qrcode1.png" class="ma" >
+					<img data-toggle = "ma" src="img/qrcode1.png" class="ma" >
 				
 				</div>
 				 <!-- 表单头部 -->
@@ -160,10 +160,10 @@
 				 	<div class="col-lg-1 col-md-1 hidden-sm">
 						<img src="img/line.png" class="pic" >
 					</div>
-				 	<div class="col-lg-5 col-md-5 ma-d">
+				 	<div data-target="ma" class="col-lg-5 col-md-5 ma-d">
 						<img src="img/ma.png" class="pic2" >
-						<label class="hidden-sm">扫码登录</label>
-						<a href=""><span data-click="ma" class="menu-close hidden-lg hidden-md"></span></a>
+					<!-- 	<label class="hidden-sm">扫码登录</label> -->
+						<a href=""><span data-click="ma" class="closed hidden-lg hidden-md">&times;</span></a>
 					</div>
 				 </div>
 			 </div>
@@ -238,34 +238,39 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-5-1">
-						<div class="tab active">
+						<a href="index.html"><div class="tab">
 							<span class="fa fa-home"></span>
-							<div>首页</div>
-						</div>
+							<div class="active">首页</div>
+							</div>
+							</a>
 					</div>
 					<div class="col-sm-5-1">
-						<div class="tab">
+						<a href="course.html"><div class="tab">
 							<span class="fa fa-map"></span>
 							<div>课程</div>
-						</div>
+							</div>
+					   </a>
 					</div>
 					<div class="col-sm-5-1">
-						<div class="tab school">
+						<a href="school.html"><div class="tab school">
 							<span class="fa fa-bank"></span>
 							<div>校区</div>
-						</div>
+							</div>
+					  </a>
 					</div>
 					<div class="col-sm-5-1">
-						<div class="tab">
+						<a href="teacher.html"><div class="tab">
 							<span class="fa fa-address-card-o"></span>
 							<div>讲师</div>
-						</div>
+							</div>
+							</a>
 					</div>
 					<div class="col-sm-5-1">
-						<div class="tab">
+						<a href="login.html"><div class="tab active">
 							<span class="fa fa-user"></span>
 							<div>用户</div>
-						</div>
+							</div>
+							</a>
 					</div>
 				</div>
 			</div>

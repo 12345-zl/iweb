@@ -80,9 +80,9 @@
 				<div class="col-md-10 col-lg-10 col-sm-12">
 					<ul class="menu">
 						<li><a href="index.html">首页</a></li>
-						<li  class="active"><a href="course.html">全部课程</a></li>
-						<li><a href="course_base.html">基础课程</a></li>
-						<li><a href="course-core.html">核心课程</a></li>
+						<li><a href="course.html">全部课程</a></li>
+						<li ><a href="course_base.html">基础课程</a></li>
+						<li  class="active"><a href="course-core.html">核心课程</a></li>
 						<li><a href="course_progress.html">进阶课程</a></li>
 						<li><a href="teacher.html">名师堂</a></li>
 						<li><a href="school.html">校区</a></li>
@@ -117,20 +117,19 @@
 			<div class="course-types">
 				<span>课程等级：</span>
 				<ul>
-					<li class="active"><a href="course.html">不限</a></li>
+					<li><a href="course.html">不限</a></li>
 					<li><a href="course_base.html">基础课程</a></li>
-					<li><a href="course-core.html">核心课程</a></li>
+					<li class="active"><a href="course-core.html">核心课程</a></li>
 					<li><a href="course_progress.html">进阶课程</a></li>
 				</ul>
 			</div>
 			<!-- 5.3课程列表 -->
-			<div class="course-list" id="courseNewest">
-           
-			 <img src="img/loading.gif" class="loading">
+			<div class="course-list" id="courseCore" >
+				<img src="img/loading.gif" class="loading">
 			</div>
 			<!-- 5.4分页条 -->
-			<div class="pager" id="pager">
-				<!-- <ul>
+			<div class="pager">
+				<ul>
 					<li class="disabled"><a href="#">首页</a></li>
 					<li class="active"><a href="#">1</a></li>
 					<li><a href="#">2</a></li>
@@ -138,7 +137,7 @@
 					<li><a href="#">4</a></li>
 					<li><a href="#">5</a></li>
 					<li><a href="#">尾页</a></li>
-				</ul> -->
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -209,49 +208,43 @@
 	</div>
 	</div>
 	<!-- 7.页签条：tabbar——仅在PHONE中显示，功能约等于顶部的导航条，但是最多只能放六项 -->
-	<div class="tabbar hidden-lg hidden-md">
+	<div class="tabbar hidden-md hidden-lg">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-5-1">
-					<a href="index.html"><div class="tab">
-						<span class="fa fa-home"></span>
-						<div class="active">首页</div>
-						</div>
-						</a>
+				<div class="col-sm-5-1 ">
+				<div class="tab active">
+					<span class="fa fa-home"></span>
+					<div>首页</div>
+				</div>
 				</div>
 				<div class="col-sm-5-1">
-					<a href="course.html"><div class="tab  active">
+					<div class="tab">
 						<span class="fa fa-map"></span>
 						<div>课程</div>
-						</div>
-				   </a>
+					</div>
 				</div>
 				<div class="col-sm-5-1">
-					<a href="school.html"><div class="tab school">
+					<div class="tab">
 						<span class="fa fa-bank"></span>
 						<div>校区</div>
-						</div>
-				  </a>
+					</div>
 				</div>
 				<div class="col-sm-5-1">
-					<a href="teacher.html"><div class="tab">
-						<span class="fa fa-address-card-o"></span>
+					<div class="tab">
+						<span class="fa fa-address-card"></span>
 						<div>讲师</div>
-						</div>
-						</a>
+					</div>
 				</div>
 				<div class="col-sm-5-1">
-					<a href="login.html"><div class="tab">
+					<div class="tab ">
 						<span class="fa fa-user"></span>
 						<div>用户</div>
-						</div>
-						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src="js/components.js"></script>
-	<script src="js/course.js"></script>
-	
+	<script src="js/course-core.js"></script>
 </body>
 </html>
