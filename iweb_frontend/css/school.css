@@ -1,79 +1,55 @@
-.bread {
-    line-height: 32px;
-    color: #999;
-    font-size: 14px;
-    margin-bottom: 25px;
+/* 4.面包屑 */
+.crumbs{
+	margin-top: 5px;
+
 }
-.bread a {
-    color: #999;
+.crumbs a{
+	color: #999;
+	font-size: 14px;
 }
-.bread a:hover{
+.crumbs a:hover{
 	color: #999;
 }
+/* 5.主体部分 */
+.address{
+	font-size: 40px;
+    color:#7EC861;
+	text-align: center;
+	margin-top: 30px;
+}
 
-.main .container .row{
-    border-bottom: 1px dotted #CCCCCC;
-	
+.main  .container .row{
+	border-bottom: 1px dotted #ccc;
+	margin-left: 70px;
 }
 .main .container .row:last-child{
-	border-bottom: none;
+	border-bottom:none;
 }
 .map{
-	font-size: 90px;
-	color: #00BE56;
-	
+	margin-left:30px ;
 }
-.address {
-    float: left;
-    width: 580px;
-	transform: translateX(50px);
+.map h3{
+	color: #555;
+	text-align:left;
+	font-weight: lighter;
+	font-size: 18px;
 }
-.address > h3 {
-    font-size: 18px;
-    font-weight: lighter;
-    margin-bottom: 10px;
+.map p{
+	color: #c4c4c4;
+	text-align: left;
+	font-size:14px ;
 }
-.address >p {
-    font-size: 14px;
-    color: #999;
-}
-
-@media screen and (max-width:767px){
-	 /*让body在底部留白,高度为.tabbar的高度*/
-	 .tabbar{
-	 	position: fixed;
-	 	left: 0;
-	 	right: 0;
-	 	bottom: 0;
-	 	height: 64px;
-	 	background: #F8F6FA;
-	 	border-top: 1px solid #d2cfcc;
-	 }
-	 
-	body{
-		margin-bottom: 64px;
-	}
-	.tab{
-		color: #ccc;
-		text-align: center;
-		padding: 7px 0 0;
-	}
-	.tab.school{
-		color: #00be56;
-	}
-	.tab .fa{
-		font-size: 2em;
-	}
-	.map{
-		font-size: 60px;
-		color: #00BE56;
+@media  screen and (max-width:767px) {
+	.address{
+		float: left;
+		padding: 0;
+		width: 100%;
 		
 	}
-	.address {
-	    float: left;
-	    width: 580px;
-		transform: translateX(10px);
+	.main  .container .row{
+		margin-left: 0;
 	}
+	
+	
 }
-
 

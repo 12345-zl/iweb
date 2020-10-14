@@ -27,12 +27,15 @@
 }
 .mainbar .course .pic img{
 	width: 100%;
+	transition: all .5s;
 }
-
+.mainbar .course .pic:hover img{
+	    transform: scale(1.1,1.1);
+}
 .mainbar  .course .title{
 	display: block;   /* 让这个课程标题占一整行 */
 	text-align: left;
-	line-height: 1.6em;
+	line-height: 2em;
 }
 .mainbar .course .teacher{
 	display: block;
@@ -148,6 +151,9 @@
 		}
 		.tab .fa{
 			font-size: 2em;
+		}
+		.mainbar .course .pic:hover img{
+			    transform: none;
 		}
 	}
 }

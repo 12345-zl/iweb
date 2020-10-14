@@ -1,3 +1,14 @@
+.crumbs{
+	margin-top: 5px;
+  
+}
+.crumbs a{
+	color: #999;
+	font-size: 14px;
+}
+.crumbs a:hover{
+	color: #999;
+}
 .fontteacher{
 	color: #ccc;
 	font-size: 1.2em;
@@ -9,25 +20,36 @@
 	margin-top: 30px;
 	padding-left: 20px;
 }
+.zpxg{
+	font-size: 40px;
+    color:#7EC861;
+	text-align: center;
+	margin-top: 10px;
+	padding: 0;
+}
 .zpxg img{
-	width: 150px;
-	height: 200px;
-}
-.bottomborder ul{
-	height: 240px;
-	border-top: 1px #ccc dotted;
-	padding-top: 20px;
-}
-.xxys li p{
-	padding: 8px;
-	font-size: 1.2em;
-	color: #CCCCCC;
-}
-.xxys .fontcs p{
-	color: #f60;
-	font-size: 1.5em;
+	width: 110px;
+	height: 150px;
 }
 
+.main  .container .row{
+	border-bottom: 1px dotted #ccc;
+	margin-left: 90px;
+}
+.main .container .row:last-child{
+	border-bottom:none;
+}
+.xxys h3{
+	color: #555;
+	text-align:left;
+	font-weight: lighter;
+	font-size: 18px;
+}
+.xxys p{
+	color: #c4c4c4;
+	text-align: left;
+	font-size:14px ;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
 	.bottomborder ul{

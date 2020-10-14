@@ -365,12 +365,14 @@
 		text-align: center;
 		padding: 7px 0 0;
 	}
-	/* .tab.active{
+	.tab.active{
 		color: #00be56;
-	} */
+	}
 	.tab .fa{
 		font-size: 2em;
 	}
+	
+	
 }
 
 /* 8.面包屑 */
